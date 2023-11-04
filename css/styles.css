@@ -43,7 +43,8 @@ ul {
     border-bottom: 1px solid #E7E9FC;
     padding-top: 24px;
     padding-bottom: 24px;
-    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08;)}
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
 
 .container-header {
     display: flex;
@@ -249,7 +250,13 @@ h1 {
     left: 50%;
     transform: translate(-50%,-50%);
 }
+
+
+
 /* Our Team */
+
+
+
 .section-team {
     display: flex;
     flex-direction: column;
@@ -302,7 +309,6 @@ h1 {
 .social-icon-container {
     width: 40px;
     height: 40px;
-    background-color: #4D5AE5;
     border-radius: 50%;
     position: relative;
 }
@@ -315,12 +321,11 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-icon-link:hover .social-icon-link:focus {
+.social-icon-link:hover,
+.social-icon-link:focus {
     background-color: #404bbf; 
 }
 
@@ -359,14 +364,16 @@ h1 {
 }
 
 .portfolio-list-item {
-width: calc((100% - 48px) / 3);
-transition-property: box-shadow;
+    width: calc((100% - 48px) / 3);
+    transition-property: box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-list-item:hover {
-    box-shadow: 1px 1px 5px  #8E8F99;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .plist-item-container:hover {
@@ -398,11 +405,9 @@ transition-property: box-shadow;
 
 .plist-overlay {
     background-color: #4D5AE5;
-    padding-top: 40px;
-    padding-left: 32px;
-    padding-right: 32px;
+    padding: 40px 32px;
     line-height: 24px;
-    letter-spacing: 2%;
+    letter-spacing: 0.02em;
     color: #F4F4FD;
     position: absolute;
     top: 0;
@@ -428,6 +433,7 @@ transition-property: box-shadow;
 }
 .footer-container {
 display: flex;
+align-items: baseline;
 }
 
 
@@ -486,7 +492,7 @@ display: flex;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition-property: color;
+    transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
